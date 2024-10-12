@@ -54,7 +54,7 @@ The architectures supported by this image are:
 | Architecture | Available | Tag |
 | :----: | :----: | ---- |
 | x86-64 | ✅ | amd64-\<version tag\> |
-| arm64 | ❌ | |
+| arm64 | ✅ | arm64v8-\<version tag\> |
 | armhf | ❌ | |
 
 ## Application Setup
@@ -116,7 +116,7 @@ services:
       - TZ=Etc/UTC
       - LIBREWOLF_CLI=https://www.linuxserver.io/ #optional
     volumes:
-      - /path/to/config:/config
+      - /path/to/librewolf/config:/config
     ports:
       - 3000:3000
       - 3001:3001
@@ -136,7 +136,7 @@ docker run -d \
   -e LIBREWOLF_CLI=https://www.linuxserver.io/ `#optional` \
   -p 3000:3000 \
   -p 3001:3001 \
-  -v /path/to/config:/config \
+  -v /path/to/librewolf/config:/config \
   --shm-size="1gb" \
   --restart unless-stopped \
   lscr.io/linuxserver/librewolf:latest
@@ -320,4 +320,5 @@ Once registered you can define the dockerfile to use with `-f Dockerfile.aarch64
 
 ## Versions
 
+* **12.10.24:** - Publish aarch64 image. Switch to new upstream repo.
 * **09.04.24:** - Initial release.

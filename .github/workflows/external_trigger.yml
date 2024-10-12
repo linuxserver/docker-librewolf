@@ -23,7 +23,7 @@ jobs:
           echo "> [!NOTE]" >> $GITHUB_STEP_SUMMARY
           echo "> External trigger running off of master branch. To disable this trigger, add \`librewolf_master\` into the Github organizational variable \`SKIP_EXTERNAL_TRIGGER\`." >> $GITHUB_STEP_SUMMARY
           printf "\n## Retrieving external version\n\n" >> $GITHUB_STEP_SUMMARY
-          EXT_RELEASE=$(curl -sL https://deb.librewolf.net/dists/bookworm/main/binary-amd64/Packages |grep -A 4 'Package: librewolf' | awk '/Version:/ {print $2}' |sort -V | tail -1)
+          EXT_RELEASE=$(curl -sL https://repo.librewolf.net/dists/librewolf/main/binary-amd64/Packages |grep -A 4 'Package: librewolf' | awk '/Version:/ {print $2}' |sort -V | tail -1)
           echo "Type is \`custom_version_command\`" >> $GITHUB_STEP_SUMMARY
           if [ -z "${EXT_RELEASE}" ] || [ "${EXT_RELEASE}" == "null" ]; then
             echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
@@ -43,10 +43,15 @@ jobs:
           token=$(curl -sX GET \
             "https://ghcr.io/token?scope=repository%3Alinuxserver%2Flibrewolf%3Apull" \
             | jq -r '.token')
-            digest=$(curl -s \
+            multidigest=$(curl -s \
               --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
               --header "Authorization: Bearer ${token}" \
               "https://ghcr.io/v2/${image}/manifests/${tag}" \
+              | jq -r 'first(.manifests[].digest)')
+            digest=$(curl -s \
+              --header "Accept: application/vnd.docker.distribution.manifest.v2+json" \
+              --header "Authorization: Bearer ${token}" \
+              "https://ghcr.io/v2/${image}/manifests/${multidigest}" \
               | jq -r '.config.digest')
           image_info=$(curl -sL \
             --header "Authorization: Bearer ${token}" \

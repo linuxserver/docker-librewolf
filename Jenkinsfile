@@ -27,14 +27,14 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/librewolf'
     PR_DOCKERHUB_IMAGE = 'lspipepr/librewolf'
     DIST_IMAGE = 'ubuntu'
-    MULTIARCH = 'false'
+    MULTIARCH = 'true'
     CI = 'true'
     CI_WEB = 'true'
     CI_PORT = '3000'
     CI_SSL = 'false'
     CI_DELAY = '120'
-    CI_DOCKERENV = 'TZ=US/Pacific'
-    CI_AUTH = 'user:password'
+    CI_DOCKERENV = ''
+    CI_AUTH = ''
     CI_WEBPATH = ''
   }
   stages {
@@ -131,7 +131,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' curl -sL https://deb.librewolf.net/dists/bookworm/main/binary-amd64/Packages |grep -A 4 'Package: librewolf' | awk '/Version:/ {print $2}' |sort -V | tail -1 ''',
+            script: ''' curl -sL https://repo.librewolf.net/dists/librewolf/main/binary-amd64/Packages |grep -A 4 'Package: librewolf' | awk '/Version:/ {print $2}' |sort -V | tail -1 ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
