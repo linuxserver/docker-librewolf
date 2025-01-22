@@ -6,6 +6,7 @@ project_url: "https://librewolf.net/"
 project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/librewolf-logo.png"
 project_blurb: "[LibreWolf]({{ project_url }}) is a custom and independent version of Firefox, with the primary goals of privacy, security and user freedom. LibreWolf also aims to remove all the telemetry, data collection and annoyances, as well as disabling anti-freedom features like DRM."
 project_lsio_github_repo_url: "https://github.com/linuxserver/docker-{{ project_name }}"
+project_categories: "Web Browser"
 project_blurb_optional_extras_enabled: false
 # supported architectures
 available_architectures:
