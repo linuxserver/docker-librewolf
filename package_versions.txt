@@ -784,7 +784,7 @@ libpython3.11-stdlib                                                          3.
 libquadmath0                                                                  12.2.0-14+deb12u1                          deb                         
 librav1e0                                                                     0.5.1-6                                    deb                         
 libreadline8                                                                  8.2-1.3                                    deb                         
-librewolf                                                                     141.0.3-1                                  deb                         
+librewolf                                                                     142.0-1                                    deb                         
 librhash0                                                                     1.4.3-3                                    deb                         
 librsvg2-2                                                                    2.54.7+dfsg-1~deb12u1                      deb                         
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2+b2             deb                         
@@ -1081,6 +1081,7 @@ xserver-xorg-video-intel                                                      2:
 xserver-xorg-video-nouveau                                                    1:1.0.17-2                                 deb                         
 xserver-xorg-video-qxl                                                        0.1.5+git20200331-3                        deb                         
 xserver-xorg-video-radeon                                                     1:19.1.0-3                                 deb                         
+xsettingsd                                                                    1.0.2-1                                    deb                         
 xterm                                                                         379-1                                      deb                         
 xutils                                                                        1:7.7+23                                   deb                         
 xvfb                                                                          2:21.1.7-3+deb12u10                        deb                         
