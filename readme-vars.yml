@@ -30,9 +30,6 @@ custom_params:
 opt_param_usage_include_env: true
 opt_param_env_vars:
   - {env_var: "LIBREWOLF_CLI", env_value: "https://www.linuxserver.io/", desc: "Specify one or multiple LibreWolf CLI flags, this string will be passed to the application in full."}
-opt_security_opt_param: true
-opt_security_opt_param_vars:
-  - {run_var: "seccomp=unconfined", compose_var: "seccomp:unconfined", desc: "For Docker Engine only, many modern gui apps need this to function on older hosts as syscalls are unknown to Docker."}
 # Selkies blurb settings
 selkies_blurb: true
 show_nvidia: true
@@ -112,6 +109,7 @@ init_diagram: |
   "librewolf:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "22.09.25:", desc: "Rebase to Debian Trixie."}
   - {date: "12.07.25:", desc: "Rebase to Selkies, HTTPS IS NOW REQUIRED."}
   - {date: "12.10.24:", desc: "Publish aarch64 image. Switch to new upstream repo."}
   - {date: "09.04.24:", desc: "Initial release."}
