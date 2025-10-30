@@ -782,7 +782,7 @@ libpython3.13-stdlib                                                          3.
 libquadmath0                                                                  14.2.0-19                               deb                         
 librav1e0.7                                                                   0.7.1-9+b2                              deb                         
 libreadline8t64                                                               8.2-6                                   deb                         
-librewolf                                                                     144.0-1                                 deb                         
+librewolf                                                                     144.0.2-1                               deb                         
 librhash1                                                                     1.4.5-1                                 deb                         
 librsvg2-2                                                                    2.60.0+dfsg-1                           deb                         
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2+b5          deb                         
@@ -970,7 +970,7 @@ procps                                                                        2:
 prometheus-client                                                             0.23.1                                  python                      
 propcache                                                                     0.4.1                                   python                      
 psmisc                                                                        23.7-2                                  deb                         
-psutil                                                                        7.1.1                                   python                      
+psutil                                                                        7.1.2                                   python                      
 publicsuffix                                                                  20250328.1952-0.1                       deb                         
 pulseaudio                                                                    17.0+dfsg1-2+b1                         deb                         
 pulseaudio-utils                                                              17.0+dfsg1-2+b1                         deb                         
