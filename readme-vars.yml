@@ -111,7 +111,9 @@ init_diagram: |
   "librewolf:latest" <- Base Images
 # changelog
 changelogs:
+  - {date: "28.12.25:", desc: "Add Wayland init logic."}
   - {date: "22.09.25:", desc: "Rebase to Debian Trixie."}
   - {date: "12.07.25:", desc: "Rebase to Selkies, HTTPS IS NOW REQUIRED."}
   - {date: "12.10.24:", desc: "Publish aarch64 image. Switch to new upstream repo."}
+  - {date: "28.12.25:", desc: "Add Wayland init logic."}
   - {date: "09.04.24:", desc: "Initial release."}
