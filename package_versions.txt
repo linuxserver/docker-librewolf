@@ -867,7 +867,7 @@ libpython3.13-stdlib                                                          3.
 libquadmath0                                                                  14.2.0-19                              deb                         
 librav1e0.7                                                                   0.7.1-9+b2                             deb                         
 libreadline8t64                                                               8.2-6                                  deb                         
-librewolf                                                                     148.0.2-3                              deb                         
+librewolf                                                                     149.0-1                                deb                         
 librhash1                                                                     1.4.5-1                                deb                         
 librsvg2-2                                                                    2.60.0+dfsg-1                          deb                         
 librtmp1                                                                      2.4+20151223.gitfa8646d.1-2+b5         deb                         
@@ -1126,7 +1126,6 @@ websockets                                                                    16
 wheel                                                                         0.46.3                                 python                      
 wl-clipboard                                                                  2.2.1-2                                deb                         
 wlr-randr                                                                     0.4.1-1                                deb                         
-wtype                                                                         0.4-3                                  deb                         
 x11-apps                                                                      7.7+11+b1                              deb                         
 x11-common                                                                    1:7.7+24+deb13u1                       deb                         
 x11-session-utils                                                             7.7+6+b1                               deb                         
